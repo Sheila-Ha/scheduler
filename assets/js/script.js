@@ -13,8 +13,11 @@
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
   //
-//  this.button.addEventListener( 'click',
-//   this.onButtonClick.bind( this ) );
+  $(document).ready(function() {
+    element.on("click", function(){
+
+    });
+  });
 
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
@@ -26,7 +29,17 @@
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
   //
+
+  function textEntry() {
+    $('.saveBtn').on('click', function() {
+      const key = $(this).parent().attr('id');
+      const value = $(this).siblings('.description').val();
+      localStorage.setItem(key, value);
+    });
+  }
+
   // TODO: Add code to display the current date in the header of the page.
+  
   const currentDate = dayjs(); 
   const formattedDate = currentDate.format('MM-DD-YYYY HH:mm:ss');
   $('#currentDay').text(formattedDate);
