@@ -68,7 +68,7 @@ The guide used:
  - [dayjs](https://www.jsdelivr.com/package/npm/dayjs)
  - [git-revert](https://git-scm.com/docs/git-revert)
  - [auto-populate html](https://stackoverflow.com/questions/69069625/how-to-automatically-write-html-structure#:~:text=If%20you%20are%20using%20VS,Doctype%20in%20HTML%20or%20PHP.)
- 
+- [dates and times blog](https://blog.openreplay.com/working-with-dates-and-times-with-day-js/) 
 
 
 
