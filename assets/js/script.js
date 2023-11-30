@@ -12,9 +12,18 @@
   $('#currentDay').text(formattedDate);
     
     //TODO: When I scroll down, then I'm presented with time blocks for 9-5pm
-  
-  
-  
+      //as you scroll down the time blocks are seen
+    //TODO: I view the time blocks for that day, then each time block is 
+    // color-coded to indicate whether it is in the past, present, or future
+    // TODO: Add code to apply the past, present, or future class to each time
+    // block by comparing the id to the current hour. HINTS: How can the id
+    // attribute of each time-block be used to conditionally add or remove the
+    // past, present, and future classes? How can Day.js be used to get the
+    // current hour in 24-hour time?
+    $('.time-block').each(function( index ) {
+      var hour = $(this).attr('id').replace('hour-', '');
+      console.log(hour)
+    });
   
  
   // TODO: Add a listener for click events on the save button. This code should
@@ -27,12 +36,7 @@
   
 
 
-  // TODO: Add code to apply the past, present, or future class to each time
-    // block by comparing the id to the current hour. HINTS: How can the id
-    // attribute of each time-block be used to conditionally add or remove the
-    // past, present, and future classes? How can Day.js be used to get the
-    // current hour in 24-hour time?
-    $
+  
 
   // TODO: Add code to get any user input that was saved in localStorage and set
     // the values of the corresponding textarea elements. HINT: How can the id
