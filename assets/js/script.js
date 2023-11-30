@@ -1,10 +1,16 @@
   
-   // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
+  // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
   // the code isn't run until the browser has finished rendering all the elements
   // in the html.
   $(document).ready(function(){
-  
-    // Added code to display the current date in the header of the page.
+    var appointments = JSON.parse(localStorage.getItem('appointments'));
+    $(appointments).each(function(index) {
+      //console.log(this.text + ' ' + this.time);
+      //on page load, app finds any appointments stored in local storage
+      //loops through to populate scheduler
+      $('#' + this.time + ' textarea').val(this.text);
+    });
+  // Added code to display the current date in the header of the page.
   const currentDate = dayjs(); 
   const formattedDate = currentDate.format('ddd MMM D, YYYY HH:mm:ss A');
   $('#currentDay').text(formattedDate);
@@ -24,29 +30,23 @@
       }
       //if current hour is before block hour = green
       else {
-        $(this).removeClass('past present').addClass('future';)
+        $(this).removeClass('past present').addClass('future');
       }
     });
-  
- 
-  // TODO: Add a listener for click events on the save button. This code should
-    // use the id in the containing time-block as a key to save the user input in
-    // local storage. 
-    // HINT: What does `this` reference in the click listener
-    // function? How can DOM traversal be used to get the "hour-x" id of the
-    // time-block containing the button that was clicked? How might the id be
-    // useful when saving the description in local storage?
-  
 
-
-  
-
-  // TODO: Add code to get any user input that was saved in localStorage and set
-    // the values of the corresponding textarea elements. HINT: How can the id
-    // attribute of each time-block be used to do this?
+  // Added code to get any user input that was saved in localStorage and set
+  // the values of the corresponding textarea elements.
     $('.saveBtn').on('click', function() {
-      var text = $(this).siblings('.description').val();
-      var time = $(this).parent().attr('id');
+      var appointmentText = $(this).siblings('.description').val();
+      var appointmentTime = $(this).parent().attr('id');
+      var appointment = {
+        text: appointmentText,
+        time: appointmentTime
+      }
+
+      //saving appointment to local storage
+      appointments.push(appointment);
+      localStorage.setItem('appointments', JSON.stringify(appointments));
       // console.log('test');
       // console.log(text);
       // console.log(time);
