@@ -40,9 +40,9 @@
     $('.saveBtn').on('click', function() {
       var text = $(this).siblings('.description').val();
       var time = $(this).parent().attr('id');
-      console.log('test');
-      console.log(text);
-      console.log(time);
+      // console.log('test');
+      // console.log(text);
+      // console.log(time);
   });
 
 });
