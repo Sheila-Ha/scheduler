@@ -3,32 +3,28 @@
   // the code isn't run until the browser has finished rendering all the elements
   // in the html.
   $(document).ready(function(){
-    // $("button").click(function(){
-    //   $("p").wrapAll("<div></div>");
   
-    // TODO: Add code to display the current date in the header of the page.
+    // Added code to display the current date in the header of the page.
   const currentDate = dayjs(); 
   const formattedDate = currentDate.format('ddd MMM D, YYYY HH:mm:ss A');
   $('#currentDay').text(formattedDate);
     
-    //TODO: When I scroll down, then I'm presented with time blocks for 9-5pm
-      //as you scroll down the time blocks are seen
-    //TODO: I view the time blocks for that day, then each time block is 
-    // color-coded to indicate whether it is in the past, present, or future
-    // TODO: Add code to apply the past, present, or future class to each time
-    // block by comparing the id to the current hour. HINTS: How can the id
-    // attribute of each time-block be used to conditionally add or remove the
-    // past, present, and future classes? How can Day.js be used to get the
-    // current hour in 24-hour time?
+    // Added code to apply the past, present, or future class to each time
+    // block by comparing the id to the current hour.
     $('.time-block').each(function(index) {
       var blockHour = $(this).attr('id').replace('hour-', '');
       var currentHour = dayjs().hour();
-      //if time is greater than the block time add past color
+      //if current hour is greater than the block hour = grey
       if (currentHour>blockHour) {
         $(this).removeClass('present future').addClass('past');
       }
+      //if current hour is equal to block hour = red
       else if (currentHour==blockHour) {
         $(this).removeClass('past future').addClass('present');
+      }
+      //if current hour is before block hour = green
+      else {
+        $(this).removeClass('past present').addClass('future';)
       }
     });
   
