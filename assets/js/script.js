@@ -24,8 +24,11 @@
       var blockHour = $(this).attr('id').replace('hour-', '');
       var currentHour = dayjs().hour();
       //if time is greater than the block time add past color
-      if (currentHour>blockHour){
+      if (currentHour>blockHour) {
         $(this).removeClass('present future').addClass('past');
+      }
+      else if (currentHour==blockHour) {
+        $(this).removeClass('past future').addClass('present');
       }
     });
   
