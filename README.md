@@ -55,7 +55,7 @@
   - Color coded time blocks depending on the actual time of day
   - 3 color code blocks for time of day
       - grey past
-        
+         ![Alt text](<grey past.png>)
 
 
       - red present
@@ -63,7 +63,7 @@
       
       
       - green future
-        ![!\[Alt text\](image.png)](<green future.png>)
+        ![Alt text](<green future.png>)
 
   - Ability to save appointments/events on time blocks in scheduler on local storage
 
@@ -90,9 +90,6 @@ The guide used:
  - [auto-populate html](https://stackoverflow.com/questions/69069625/how-to-automatically-write-html-structure#:~:text=If%20you%20are%20using%20VS,Doctype%20in%20HTML%20or%20PHP.)
 - [dates and times blog](https://blog.openreplay.com/working-with-dates-and-times-with-day-js/) 
 - [each](https://api.jquery.com/each/)
-
-
- 
 
 
 ## License:
