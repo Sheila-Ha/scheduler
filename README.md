@@ -23,10 +23,10 @@
   ## What you are expected to see on your screen
 
   * A view of what the empty scheduler will look like
-  ![Alt text](image-1.png)
+  ![!\[Alt text\](image-1.png)](assets/images/image-1.png)
 
   * A view of what the save schedule looks like with appointments
-  ![Alt text](image-3.png)
+  ![!\[Alt text\](image-3.png)](assets/images/image-3.png)
 
 ## Installation:
   - ### Create a new repo on GitHub
@@ -41,7 +41,7 @@
           - git clone command - it copies the repo from github  to your local computer
       - git clone https://github.com/YOUR-USERNAME/YOURREPOSITORY
           - Your command line should respond as below.
-          ![Alt text](image-2.png)
+          ![!\[Alt text\](image-2.png)](assets/images/image-2.png)
 
 
   - ### Navigation
@@ -55,15 +55,15 @@
   - Color coded time blocks depending on the actual time of day
   - 3 color code blocks for time of day
       - grey past
-         ![Alt text](<grey past.png>)
+         ![Alt text](<assets/images/grey past.png>)
 
 
       - red present
-        ![Alt text](<red present.png>)
+        ![Alt text](<assets/images/red present.png>)
       
       
       - green future
-        ![Alt text](<green future.png>)
+        ![Alt text](<assets/images/green future.png>)
 
   - Ability to save appointments/events on time blocks in scheduler on local storage
 
