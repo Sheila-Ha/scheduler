@@ -79,8 +79,8 @@
 ## Usage:
   - On your machine navigate to the folder you created.
   - Locate the Index.html file in your browser.
+  - https://github.com/Sheila-Ha/scheduler.git
   - https://sheila-ha.github.io/scheduler/
-  - https://github.com/Sheila-Ha/scheduler
 
 ## Credits:
 The guide used:
